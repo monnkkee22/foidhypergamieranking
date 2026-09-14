@@ -1,0 +1,77 @@
+:root {
+  color-scheme: dark;
+
+  --bg: #0c0e14;
+  --panel: #14161f;
+  --panel-raised: #1b1e2a;
+  --hairline: rgba(237, 239, 244, 0.08);
+  --hairline-strong: rgba(237, 239, 244, 0.16);
+
+  --text: #edeff4;
+  --text-muted: #8a8fa3;
+  --text-faint: #565b70;
+
+  --gold: #e8b94d;
+  --gold-dim: rgba(232, 185, 77, 0.13);
+  --teal: #4fd1c5;
+  --teal-dim: rgba(79, 209, 197, 0.13);
+  --rose: #e07a9e;
+  --rose-dim: rgba(224, 122, 158, 0.13);
+
+  --danger: #e2694f;
+
+  --font-display: "Big Shoulders Display", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 18px;
+
+  --nav-h: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image: radial-gradient(circle at 10% -8%, rgba(232, 185, 77, 0.08), transparent 42%),
+    radial-gradient(circle at 92% 6%, rgba(79, 209, 197, 0.07), transparent 40%),
+    radial-gradient(circle at 50% 110%, rgba(224, 122, 158, 0.05), transparent 45%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--gold-dim);
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
